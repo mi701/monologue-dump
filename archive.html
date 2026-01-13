@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="すべての記事を一覧できるアーカイブページ">
+    <title>記事一覧 - 星の煌めきを探して</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Noto+Serif+JP:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ==========================================
+         ヘッダー
+         ========================================== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="site-title">星の煌めきを探して</a>
+            <nav aria-label="メインナビゲーション">
+                <ul class="site-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         メインコンテンツ
+         ========================================== -->
+    <main>
+        <!-- ページタイトル -->
+        <section class="hero" style="padding: 60px 0;">
+            <div class="container">
+                <h1 class="hero-title" style="font-size: 2rem;">記事一覧</h1>
+                <p class="hero-description">
+                    これまでに書いた記事をすべて一覧できます。
+                </p>
+            </div>
+        </section>
+
+        <!-- 全記事一覧 -->
+        <section>
+            <div class="container">
+                <ul class="article-list">
+                    <li class="article-item" id="article-8">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2026-01-08">2026年1月8日</time>
+                                <span class="article-category" data-category="sports">スポーツ</span>
+                            </div>
+                            <h3 class="article-title">ベイスターズのオフシーズン</h3>
+                            <p class="article-excerpt">
+                                今年はFAで二人抜けて、人的補償で一人入ってきて…そしてなにより監督が変わって。来季のことが全く読めない。助っ人も総入れ替えだし。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <h3>逆に200％楽しみまである。</h3>
+                                    <p>
+                                        いろいろ変わったということは妄想し放題ということで…いまはポジっておきます(*^○^*)
+                                    </p>
+                                </div>
+                            </details>
+                        </article>
+                    </li>
+
+                    <li class="article-item" id="article-9">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2026-01-08">2026年1月8日</time>
+                                <span class="article-category" data-category="ai">AI活用</span>
+                            </div>
+                            <h3 class="article-title">AIでコーディングしてみた</h3>
+                            <p class="article-excerpt">
+                                今、あなたが読んでいるこのWebサイト。実は、AIと一緒に作っています。「星の煌めきを探して」というタイトルも、落ち着いたデザインも、すべてAIとの対話から生まれました。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        これまでのコーディングといえば、エディタに向かってひたすら文字を打ち込む孤独な作業でした。でも今回は違います。やりたいことを自然な言葉で伝えるだけで、AIがコードを提案してくれます。
+                                    </p>
+
+                                    <h3>まるでペアプログラミング</h3>
+
+                                    <p>
+                                        「シンプルで読みやすいデザインにしたい」「スマートフォンでも見やすくしたい」。そんな抽象的な要望も見事に汲み取って、形にしてくれました。まるで、とても作業の早い優秀なパートナーとペアプログラミングをしているような感覚です。
+                                    </p>
+
+                                    <h3>技術が広げる創造の可能性</h3>
+
+                                    <p>
+                                        記事一覧のページを作ったり、カテゴリー機能を追加したり。今までなら「面倒だな」と思って後回しにしていたような機能も、AIのおかげでスムーズに実装できました。
+                                    </p>
+                                    <p>
+                                        技術の進歩は、私たちの創造性を加速させてくれます。コーディングの細かなルールに縛られることなく、「何を作りたいか」「何を伝えたいか」という本質的な部分に集中できる。それが、AI時代の新しいモノづくりの形なのかもしれません。
+                                    </p>
+                                </div>
+                            </details>
+                            <!-- 重複削除 -->
+                        </article>
+                    </li>
+
+                    <li class="article-item" id="article-7">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2026-01-08">2026年1月8日</time>
+                                <span class="article-category" data-category="life">日常生活</span>
+                            </div>
+                            <h3 class="article-title">引っ越し準備が忙しい</h3>
+                            <p class="article-excerpt">
+                                電気とガスを止める手続きをしなければ。Webで簡単にできたらいいけど、プロパンガスの会社は電話窓口しかないっぽい。気が重い。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        （詳細な内容は準備中です）
+                                    </p>
+                                </div>
+                            </details>
+                        </article>
+                    </li>
+
+                    <li class="article-item">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2026-01-05">2026年1月5日</time>
+                                <span class="article-category" data-category="thought">思索</span>
+                            </div>
+                            <h3 class="article-title">
+                                冬の朝、窓辺で考えたこと
+                            </h3>
+                            <p class="article-excerpt">
+                                窓の外は真っ白な雪景色。いつもより早く目が覚めた朝、静けさの中で自分の心の声に耳を傾けてみた。忙しい日々の中で忘れていた、大切な何かを思い出したような気がする。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        （詳細な内容は準備中です）
+                                    </p>
+                                </div>
+                            </details>
+                        </article>
+                    </li>
+
+                    <li class="article-item" id="article-2">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2025-12-28">2025年12月28日</time>
+                                <span class="article-category" data-category="thought">思索</span>
+                            </div>
+                            <h3 class="article-title">言葉にならない感情について</h3>
+                            <p class="article-excerpt">
+                                時々、言葉にできない感情に出会う。嬉しいわけでも悲しいわけでもない、でも確かに心の中に存在する何か。それを無理に言語化しようとするのではなく、そのまま受け入れることの大切さを感じた。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        朝起きて、窓の外を見る。いつもと変わらない景色。でも、今日は何か違う。心の中に、名前のつけられない感情が広がっている。
+                                    </p>
+                                    <p>
+                                        それは喜びでもなく、悲しみでもない。不安でもなく、期待でもない。ただ、そこに存在している。言葉にしようとすると、するりと逃げていく。
+                                    </p>
+                                    <h3>言葉の限界</h3>
+                                    <p>
+                                        私たちは、感情に名前をつけることで理解しようとする。「嬉しい」「悲しい」「怒り」「不安」。でも、すべての感情がそんなに単純に分類できるわけではない。
+                                    </p>
+                                    <p>
+                                        むしろ、名前のつけられない感情の方が、より深く、より本質的なのかもしれない。言葉にできないからこそ、その感情は純粋なまま心の中に留まる。
+                                    </p>
+                                    <h3>受け入れること</h3>
+                                    <p>
+                                        最近、無理に言語化しようとするのをやめた。ただ、その感情を感じる。それだけでいいのだと思うようになった。
+                                    </p>
+                                    <p>
+                                        言葉にならない感情を、言葉にならないまま受け入れる。それは、自分自身をより深く理解することにつながっているような気がする。
+                                    </p>
+                                </div>
+                            </details>
+                            <!-- 重複削除 -->
+                        </article>
+                    </li>
+
+                    <li class="article-item" id="article-3">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2025-12-15">2025年12月15日</time>
+                                <span class="article-category" data-category="book">読書</span>
+                            </div>
+                            <h3 class="article-title">読書の時間が教えてくれたこと</h3>
+                            <p class="article-excerpt">
+                                久しぶりに一冊の本をじっくりと読んだ。スマートフォンを手放し、ページをめくる音だけが響く静かな時間。その中で気づいたのは、情報を得ることよりも、思考を深めることの価値だった。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        本棚から一冊の本を取り出した。何年も前に買ったまま、読まずに置いてあった本。表紙には少し埃が積もっている。
+                                    </p>
+                                    <p>
+                                        スマートフォンの電源を切り、静かな部屋で読み始めた。最初は少し落ち着かなかった。通知が来ないか、メッセージが届いていないか、そんなことが気になってしまう。
+                                    </p>
+                                    <h3>情報と思考の違い</h3>
+                                    <p>
+                                        でも、ページを進めるうちに、その感覚は消えていった。本の世界に没入していく。著者の言葉が、自分の中で新しい思考を生み出していく。
+                                    </p>
+                                    <p>
+                                        SNSやニュースアプリで得られるのは「情報」だ。それは大切なものだけれど、思考を深めるものではない。一方、読書は、自分の中で考えを巡らせる時間を与えてくれる。
+                                    </p>
+                                    <h3>ゆっくりと読むこと</h3>
+                                    <p>
+                                        現代社会は、速さを求める。効率を求める。でも、思考は速くできない。深い理解には、時間が必要だ。
+                                    </p>
+                                    <p>
+                                        読書の時間は、そんな「ゆっくりとした時間」を取り戻す行為なのかもしれない。急がず、焦らず、ただページをめくる。それだけで、心が落ち着いていく。
+                                    </p>
+                                    <p>
+                                        この本を読み終わったら、次はどの本を読もうか。そんなことを考えながら、また一ページをめくった。
+                                    </p>
+                                </div>
+                            </details>
+                            <!-- 重複削除 -->
+                        </article>
+                    </li>
+
+                    <li class="article-item">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2025-12-01">2025年12月1日</time>
+                                <span class="article-category" data-category="life">日常生活</span>
+                            </div>
+                            <h3 class="article-title">
+                                散歩の途中で見つけた小さな発見
+                            </h3>
+                            <p class="article-excerpt">
+                                いつもと同じ道を歩いているはずなのに、今日は違って見えた。道端に咲く小さな花、木漏れ日の美しさ、風の音。当たり前の景色の中に、新しい発見があることに気づいた。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        （詳細な内容は準備中です）
+                                    </p>
+                                </div>
+                            </details>
+                        </article>
+                    </li>
+
+                    <li class="article-item">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2025-11-20">2025年11月20日</time>
+                                <span class="article-category" data-category="thought">思索</span>
+                            </div>
+                            <h3 class="article-title">
+                                完璧を求めないこと
+                            </h3>
+                            <p class="article-excerpt">
+                                何かを始めるとき、いつも完璧を求めてしまう。でも、完璧を求めすぎると、何も始められなくなる。まずは一歩踏み出すこと。それが大切なのだと、最近ようやく理解し始めた。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        （詳細な内容は準備中です）
+                                    </p>
+                                </div>
+                            </details>
+                        </article>
+                    </li>
+
+                    <li class="article-item">
+                        <article>
+                            <div class="article-meta-group">
+                                <time class="article-meta" datetime="2025-11-05">2025年11月5日</time>
+                                <span class="article-category" data-category="life">日常生活</span>
+                            </div>
+                            <h3 class="article-title">
+                                夜空を見上げて
+                            </h3>
+                            <p class="article-excerpt">
+                                都会では星が見えにくい。でも、少し郊外に出れば、満天の星空が広がっている。その美しさに圧倒されながら、自分の小ささと、同時に宇宙とつながっている感覚を味わった。
+                            </p>
+                            <details>
+                                <summary>続きを読む →</summary>
+                                <div class="article-content">
+                                    <p>
+                                        （詳細な内容は準備中です）
+                                    </p>
+                                </div>
+                            </details>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         フッター
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="archive.html">Archive</a></li>
+            </ul>
+            <p class="footer-content">
+                &copy; 2026 星の煌めきを探して. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
