@@ -53,44 +53,22 @@
             </div>
         </section>
 
-        <!-- 記事詳細サンプル -->
-        <section id="article-9">
-            <div class="container">
-                <article class="article-detail">
-                    <header class="article-header">
-                        <time class="article-meta" datetime="2026-01-08">2026年1月8日</time>
-                        <span class="article-category" data-category="ai">AI活用</span>
-                        <h2>AIでコーディングしてみた</h2>
-                    </header>
+<!-- index.html -->
 
-                    <div class="article-content">
-                        <p>
-                            今、あなたが読んでいるこのWebサイト。実は、AIと一緒に作っています。「星の煌めきを探して」というタイトルも、落ち着いたデザインも、すべてAIとの対話から生まれました。
-                        </p>
-
-                        <h3>まるでペアプログラミング</h3>
-
-                        <p>
-                            これまでのコーディングといえば、エディタに向かってひたすら文字を打ち込む孤独な作業でした。でも今回は違います。やりたいことを自然な言葉で伝えるだけで、AIがコードを提案してくれます。
-                        </p>
-
-                        <p>
-                            「シンプルで読みやすいデザインにしたい」「スマートフォンでも見やすくしたい」。そんな抽象的な要望も見事に汲み取って、形にしてくれました。まるで、とても作業の早い優秀なパートナーとペアプログラミングをしているような感覚です。
-                        </p>
-
-                        <h3>技術が広げる創造の可能性</h3>
-
-                        <p>
-                            記事一覧のページを作ったり、カテゴリー機能を追加したり。今までなら「面倒だな」と思って後回しにしていたような機能も、AIのおかげでスムーズに実装できました。
-                        </p>
-
-                        <p>
-                            技術の進歩は、私たちの創造性を加速させてくれます。コーディングの細かなルールに縛られることなく、「何を作りたいか」「何を伝えたいか」という本質的な部分に集中できる。それが、AI時代の新しいモノづくりの形なのかもしれません。
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
+<!-- 最新記事リスト（JavaScriptで自動生成） -->
+<section id="latest-stories">
+    <div class="container">
+        <h2 class="section-title">Latest Stories</h2>
+        <!-- ここにJavaScriptが自動で記事を入れ込みます -->
+        <ul class="article-list" id="js-latest-articles-list">
+            <p style="text-align:center; color:#999;">読み込み中...</p>
+        </ul>
+        
+        <div style="text-align: center; margin-top: 40px;">
+             <a href="archive.html" class="read-more">すべての記事を見る →</a>
+        </div>
+    </div>
+</section>
 
         <!-- Aboutセクション -->
         <section id="about">
@@ -128,6 +106,74 @@
             </p>
         </div>
     </footer>
+
+    <!-- index.html の一番下に追加 -->
+
+<script>
+    // archive.html を取得して最新記事を表示するスクリプト
+    document.addEventListener('DOMContentLoaded', () => {
+        const listContainer = document.getElementById('js-latest-articles-list');
+        
+        fetch('archive.html')
+            .then(response => response.text())
+            .then(html => {
+                // 文字列をHTMLとして解釈するためのパーサー
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // archive.html内の記事アイテムを取得
+                const articles = doc.querySelectorAll('.article-item');
+                
+                // 表示する件数（ここでは最新3件）
+                const displayCount = Math.min(articles.length, 3);
+                
+                // リストをクリア
+                listContainer.innerHTML = '';
+
+                // 記事を抽出して生成
+                for (let i = 0; i < displayCount; i++) {
+                    const article = articles[i];
+                    
+                    // 必要な情報を取得
+                    const id = article.id; // article-8 など
+                    const time = article.querySelector('.article-meta').outerHTML;
+                    const category = article.querySelector('.article-category').outerHTML;
+                    const title = article.querySelector('.article-title').innerText;
+                    const excerpt = article.querySelector('.article-excerpt').innerText;
+
+                    // HTMLを組み立てる
+                    const li = document.createElement('li');
+                    li.className = 'article-item';
+                    li.style.borderBottom = 'none'; // デザイン調整
+                    li.style.marginBottom = '40px'; // デザイン調整
+                    
+                    li.innerHTML = `
+                        <article>
+                            <div class="article-meta-group">
+                                ${time}
+                                ${category}
+                            </div>
+                            <h3 class="article-title">
+                                <a href="archive.html#${id}">${title}</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                ${excerpt}
+                            </p>
+                            <p style="margin-top: 1rem;">
+                                <a href="archive.html#${id}" class="read-more">アーカイブで読む →</a>
+                            </p>
+                        </article>
+                    `;
+                    
+                    listContainer.appendChild(li);
+                }
+            })
+            .catch(error => {
+                console.error('記事の読み込みに失敗しました:', error);
+                listContainer.innerHTML = '<p>記事一覧を読み込めませんでした。</p>';
+            });
+    });
+</script>
 </body>
 
 </html>
