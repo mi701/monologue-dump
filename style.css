@@ -262,10 +262,30 @@ summary:hover {
     padding-left: 8px;
 }
 
+/* ==========================================
+   開閉ボタンの「着せ替え」魔法
+   ========================================== */
+
+/* 1. 記事が開いている時、元の「続きを読む」を見えなくする */
 details[open] summary {
+    font-size: 0; /* 文字サイズを0にして、事実上消す */
     margin-bottom: var(--spacing-md);
-    color: var(--color-accent-dark);
+    color: var(--color-secondary);
+}
+
+/* 2. その代わりに「記事をたたむ」という文字を出現させる */
+details[open] summary::after {
+    content: "記事をたたむ"; /* ここに好きな言葉を入れられます */
+    font-size: 0.95rem;    /* 文字サイズを元に戻す */
     font-style: normal;
+    display: inline-block;
+    text-decoration: underline; /* リンクっぽく見せる */
+    opacity: 0.8;
+}
+
+/* 3. 開いている時は、前のダッシュ（—）も消してスッキリさせる */
+details[open] summary::before {
+    display: none;
 }
 
 /* 続きを読むをリンク風に見せるためのクラス（index.html用） */
