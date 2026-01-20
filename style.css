@@ -32,8 +32,17 @@
 /* ==========================================
    リセット & ベーススタイル
    ========================================== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { font-size: var(--font-size-base); scroll-behavior: smooth; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-sans);
     color: var(--color-text);
@@ -45,29 +54,100 @@ body {
 /* ==========================================
    タイポグラフィ
    ========================================== */
-h1, h2, h3 { font-family: var(--font-serif); line-height: var(--line-height-heading); font-weight: 600; color: var(--color-text); }
-h1 { font-size: 2rem; margin-bottom: var(--spacing-md); }
-h2 { font-size: 1.75rem; margin-bottom: var(--spacing-sm); }
-h3 { font-size: 1.3rem; margin-bottom: var(--spacing-sm); }
-p { margin-bottom: 1.5em; }
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    line-height: var(--line-height-heading);
+    font-weight: 600;
+    color: var(--color-text);
+}
 
-a { color: var(--color-accent-dark); text-decoration: underline; transition: all 0.3s ease; }
-a:hover { color: var(--color-accent); }
+h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+a {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
 
 /* ==========================================
    レイアウト
    ========================================== */
-.container { max-width: var(--content-max-width); margin: 0 auto; padding: 0 var(--content-padding); }
+.container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+}
 
-.site-header { padding: var(--spacing-lg) 0; border-bottom: 1px solid var(--color-border); }
-.site-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm); }
-.site-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-text); text-decoration: none; }
-.site-nav { display: flex; gap: var(--spacing-md); list-style: none; }
-.site-nav a { color: var(--color-text); text-decoration: none; font-size: 0.95rem; }
-.site-nav a:hover { color: var(--color-accent-dark); }
+.site-header {
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--color-border);
+}
 
-.hero { padding: var(--spacing-2xl) 0; text-align: center; }
-.hero-title { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.site-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+.site-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+    color: var(--color-accent-dark);
+}
+
+.hero {
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
 .hero-description {
     font-size: 1.1rem;
     color: var(--color-text); /* 薄いグレーをやめて、本文と同じ色に */
@@ -77,12 +157,16 @@ a:hover { color: var(--color-accent); }
     line-height: 2; /* ゆったりと */
 }
 
-section { padding: var(--spacing-xl) 0; }
-.section-title { font-size: 1.5rem; margin-bottom: var(--spacing-lg); text-align: center; }
+section {
+    padding: var(--spacing-xl) 0;
+}
 
-/* ==========================================
-   記事リスト（没入感・優しさ重視）
-   ========================================== */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
 /* ==========================================
    記事リスト（没入感・優しさ重視）
    ========================================== */
@@ -101,14 +185,31 @@ section { padding: var(--spacing-xl) 0; }
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.article-item:last-child { border-bottom: none; }
+.article-item:last-child {
+    border-bottom: none;
+}
 
 /* 記事内の文字情報の設定（ここも抜けていました） */
-.article-meta { font-size: 0.875rem; color: var(--color-secondary); }
-.article-title { font-size: 1.5rem; margin-bottom: var(--spacing-sm); font-family: var(--font-serif); }
-.article-title a { color: var(--color-text); text-decoration: none; }
-.article-excerpt { color: var(--color-text); line-height: 1.8; }
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+}
 
+.article-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-serif);
+}
+
+.article-title a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.article-excerpt {
+    color: var(--color-text);
+    line-height: 1.8;
+}
 
 /* --- 没入モードのエフェクト --- */
 
@@ -128,10 +229,13 @@ section { padding: var(--spacing-xl) 0; }
     padding: var(--spacing-xl) 0; /* 前後に大きな余白を作って独立させる */
     border-bottom: none;    /* 下線も消す */
 }
+
 /* ==========================================
    Details/Summary（記事の開閉）
    ========================================== */
-details { margin-top: var(--spacing-sm); }
+details {
+    margin-top: var(--spacing-sm);
+}
 
 summary {
     display: inline-block;
@@ -143,8 +247,15 @@ summary {
     transition: all 0.3s ease;
     user-select: none;
 }
-summary::-webkit-details-marker { display: none; }
-summary::before { content: "— "; opacity: 0.6; }
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: "— ";
+    opacity: 0.6;
+}
 
 summary:hover {
     color: var(--color-accent-dark);
@@ -168,6 +279,7 @@ details[open] summary {
     padding-bottom: 2px;
     transition: all 0.3s ease;
 }
+
 /* マウスを乗せた時 */
 .read-more:hover {
     color: var(--color-accent-dark); /* ローズ色に変化 */
@@ -179,8 +291,18 @@ details[open] summary {
 /* ==========================================
    記事本文
    ========================================== */
-.article-content { font-size: var(--font-size-base); line-height: 2; }
-.article-content h3 { margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); border-bottom: 1px solid var(--color-bg); display: inline-block;}
+.article-content {
+    font-size: var(--font-size-base);
+    line-height: 2;
+}
+
+.article-content h3 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-bg);
+    display: inline-block;
+}
+
 .article-content blockquote {
     margin: var(--spacing-lg) 0;
     padding-left: var(--spacing-md);
@@ -197,9 +319,17 @@ details[open] summary {
     margin-right: 8px;
     font-weight: 400;
 }
-.article-category::before { content: "• "; }
 
-.article-meta-group { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.article-category::before {
+    content: "• ";
+}
+
+.article-meta-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
 
 /* ==========================================
    フッター（夜空の色）
@@ -211,16 +341,43 @@ details[open] summary {
     color: rgba(255,255,255,0.8);
     text-align: center;
 }
-.footer-content { font-size: 0.875rem; color: rgba(255,255,255,0.6); }
-.footer-links { display: flex; justify-content: center; gap: var(--spacing-md); list-style: none; margin-bottom: var(--spacing-sm); }
-.footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; }
-.footer-links a:hover { color: #fff; }
+
+.footer-content {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    list-style: none;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
 
 /* ==========================================
    レスポンシブ
    ========================================== */
 @media (min-width: 641px) {
-    :root { --font-size-base: 17px; --content-padding: 40px; }
-    h1 { font-size: 2.5rem; }
-    .hero-title { font-size: 3rem; }
+    :root {
+        --font-size-base: 17px;
+        --content-padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
 }
