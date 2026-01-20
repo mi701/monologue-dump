@@ -383,6 +383,60 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // URLに「#article-〇〇」がついているかチェック
+            const hash = window.location.hash;
+
+            if (hash) {
+                const targetId = hash.substring(1); // #を取ってIDだけにする
+                const articles = document.querySelectorAll('.article-item');
+                const heroSection = document.querySelector('.hero');
+                
+                let found = false;
+
+                articles.forEach(article => {
+                    if (article.id === targetId) {
+                        // 目的の記事なら：表示して、アコーディオンを開く
+                        found = true;
+                        
+                        // 1. 自動でアコーディオンを開き、「続きを読む」ボタンを消す
+                    const details = article.querySelector('details');
+                    if (details) {
+                        details.open = true; 
+                        
+                        const summary = details.querySelector('summary');
+                        // style.display = 'none' ではなく、remove() で存在ごと消す
+                        if (summary) summary.style.display = 'none';
+                    }
+
+                        // 2. 「← 一覧に戻る」ボタンを作る
+                        const backBtn = document.createElement('div');
+                        backBtn.innerHTML = '<a href="archive.html" style="text-decoration:none; color:var(--color-secondary); font-size:0.9rem;">← 一覧に戻る</a>';
+                        backBtn.style.marginBottom = '30px';
+                        article.prepend(backBtn);
+
+                        // 3. 記事の下の境界線を消す
+                        article.style.borderBottom = 'none';
+
+                    } else {
+                        // 目的以外の記事なら：消す
+                        article.style.display = 'none';
+                    }
+                });
+
+                // タイトルエリア（記事一覧）も消して、記事だけに集中させる
+                if (found && heroSection) {
+                    heroSection.style.display = 'none';
+                    document.querySelector('section').style.paddingTop = '40px'; 
+                }
+                
+                // ページの一番上へスクロール
+                window.scrollTo(0, 0);
+            }
+        });
+    </script>
 </body>
 
 </html>
